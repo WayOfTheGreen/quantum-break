@@ -1,0 +1,1012 @@
+html {
+    font-family:roboto-reg;
+}
+html, body, h1, h2, h3, p, ul, li, a {
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+}
+li {
+	list-style-type: none; 
+}
+a {
+	color:#1e2425;
+	text-decoration:none;
+}
+.clear {
+	clear:both;
+}
+/*
+*   SPECIAL BUTTONS
+*   special buttons are only in header, news and footer form sections
+*/
+#main_header ul li a,
+#news a,
+footer form button {
+	display:block;
+	text-align:center;
+	margin:0 auto;
+	padding:5px 0;
+	position:relative;
+	text-transform: uppercase;
+	width:95%;
+	z-index:1;
+}
+/* span contains the black border */
+#main_header ul li a span,
+#news a span,
+footer form button span {
+    border:1px solid #1e2425;
+    display:block;
+    transition:color 1s, border 1s;
+    width:100%;
+}
+
+#main_header ul li a:hover span,
+#news a:hover span,
+footer form button:hover span {
+    border:1px solid #f8912c;
+    color: #f8912c;
+}
+/* before and after on a to create the orange overlay effect */
+#main_header ul li a:before,
+#news a:before,
+footer form button:before {
+    background:#f8912c;
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:-38px;
+    transform:skew(-45deg);
+    transition:background 0.4s, height 0.4s, top 0.4s, left 0.2s;
+    width:70%;
+    height:88%;
+    z-index:-1;
+}
+#main_header ul li a:after,
+#news a:after,
+footer form button:after {
+    background:#f8912c;
+    content:"";
+    position:absolute;
+    top:0px;
+    right:-38px;
+    transform:skew(-45deg);
+    transition:background 0.4s, height 0.4s;
+    width:70%;
+    height:88%;
+    z-index:-1;
+}
+#main_header ul li a:hover:before,
+footer form button:hover:before {
+	left: -35px;
+}
+#main_header ul li a:hover:before, #main_header ul li a:hover:after,
+footer form button:hover:before, footer form button:hover:after {
+    background:#1e2425;
+    top:0;
+    height:100%;
+}
+
+/* news links */
+/* span contains the black border */
+#news a span,
+footer form button span {
+    padding:5px 0;
+}
+
+/* footer links */
+/* span contains the black border */
+footer form button span {
+    padding:10px 0;
+}
+/* footer before and afters */
+footer form button:before {
+    position:absolute;
+    bottom:0;
+    left:-35px;
+}
+footer form button:after {
+    position:absolute;
+    top:0px;
+    right:-35px;
+}
+/* end special buttons
+
+
+
+/**
+*  MAIN HEADER
+*
+*/
+#main_header {
+	background:url('../assets/backgrounds/hero.jpg') no-repeat center 0px fixed;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	-webkit-background-size:cover;
+	background-size:cover;
+	position:relative;
+	overflow:hidden;
+}
+#main_header #main_nav {
+	background:#1e2425;
+	color:#f8912c;
+}
+/* time is power */
+#main_header article {
+	position:relative;
+}
+#main_header:before {
+	background:rgba(255,255,255,0.75);
+	border-top:2px solid #f8912c;
+	content:"";
+	padding-top:20px;
+	position:absolute;
+	right:-10%;
+	bottom:-150px;
+	left:-10%;
+	transform: rotate(7deg);
+	width:110%;
+	height:500px;
+}
+#main_header article h2 {
+	text-transform: uppercase;
+}
+/* end main header */
+
+
+/*
+*  NEWS
+*
+*/
+#news {
+	background:url('../assets/backgrounds/news.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	color:rgba(0,0,0,0.87);
+}
+#news article {
+	background:rgba(235,235,235,0.9);
+	border:1px solid #f8912c;
+	box-sizing: border-box;
+}
+#news article img {
+	width:100%;
+}
+#news h3 {
+	font-family:"roboto-thin", sans-serif;
+	text-transform: uppercase;
+}
+/* end news */
+
+
+/*
+*  CHARACTERS 
+*
+*/
+#characters {
+	background:url(../assets/backgrounds/time_is_power.jpg) no-repeat center center fixed;
+	-webkit-background-size:cover;
+	-o-background-size:cover;
+	-moz-background-size:cover;
+	background-size:cover;
+	color:#fff;
+	font-family: 'roboto-thin', sans-serif;
+	text-shadow: 0 0 10px #000, 0 0 5px #000, 0 0 2px #000;
+}
+#characters h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+#characters ul {
+	text-align: center;
+}
+#characters ul li:first-child {
+	background:url('../assets/characters/jack.jpg') no-repeat;
+}
+#characters ul li:nth-child(2) {
+	background:url('../assets/characters/paul.jpg') no-repeat;
+}
+#characters ul li:nth-child(3) {
+	background:url('../assets/characters/william.jpg') no-repeat;
+}
+#characters ul li:last-child {
+	background:url('../assets/characters/martin.jpg') no-repeat;
+}
+#characters ul li {
+	border:2px solid #f8912c;
+	margin:20px auto;
+	position:relative;
+	overflow:hidden;
+	width:250px;
+	height:437px;
+}
+#characters ul li img {
+	position:absolute;
+	right:10px;
+	bottom:60px;
+	transition:bottom 0.3s;
+	z-index:1;
+}
+#characters ul li:hover img {
+    bottom:90px;
+}
+#characters ul li p {
+	color:#000;
+	text-transform: uppercase;
+	text-shadow: none;
+	z-index:1;
+}
+/* characters name */
+#characters ul li p.char_name {
+	position:absolute;
+	bottom:10px;
+	left:50%;
+	/* center correction */
+	transform:translateX(-50%);
+	transition: bottom 0.3s;
+}
+#characters ul li:hover p.char_name {
+    bottom:40px;
+}
+/* actors name */
+#characters ul li p.actor {
+	font-size:12px;
+	position:absolute;
+	bottom:-20px;
+	left:50%;
+	/* center correction */
+	transform:translateX(-50%);
+	transition: bottom 0.3s;
+}
+#characters ul li:hover p.actor {
+    bottom:7.5px;
+}
+/* create orange background */
+#characters ul li:before {
+	background:#f8912c;
+	content:"";
+	position:absolute;
+	bottom:-1px;
+	left:53px;
+	transform:skew(115deg);
+	transition: left 0.3s, height 0.3s;
+	width:200%;
+	height:40%;
+	z-index:1;
+}
+#characters ul li:hover:before {
+    left:27px;
+    height:46%;
+}
+/* create black transparent overlay */
+#characters ul li:after {
+	background:rgb(0,0,0);
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	opacity:0.3;
+	transition:opacity 0.3s;
+	width:100%;
+	height:100%;
+}
+#characters ul li:hover:after {
+    opacity:0;
+}
+/* end characters */
+
+
+/*
+*   SOCIAL
+*
+*/
+#social {
+	display:none;
+    /*border:1px solid red;
+    padding:20px 0;*/
+}
+/* end social */
+
+
+/*
+*  FOOTER 
+*
+*/
+footer {
+	background:#1e2425;
+	color:#fff;
+}
+footer a {
+	color:#f8912c;
+}
+footer a:hover {
+	color:#fff;
+}
+footer form {
+	position:relative;
+}
+/* make relative for label */
+footer form div {
+	position:relative;
+}
+footer form input {
+	background:none;
+	border:none;
+	border-bottom:1px solid #9e9e9e;
+	box-sizing: border-box;
+	color:#fff;
+	z-index:1;
+}
+footer form label {
+	color:#9e9e9e;
+	cursor:text;
+    position:absolute;
+	top:0;
+	left:0;
+}
+footer form #country {
+	color:#9e9e9e;
+	vertical-align: top;
+}
+footer form input:focus {
+	border-bottom:1px solid #3e696f;
+}
+footer form input:focus + label {
+    color:#3e696f;
+}
+/* dropdown */
+footer form ul {
+	border-bottom:1px solid #9e9e9e;
+	box-sizing: border-box;
+	display:block;
+	width:100%;
+}
+footer form ul li {
+	background:#fff;
+	color:#000;
+	cursor:pointer;
+	display:none;
+	padding:10px;
+}
+footer form ul li:hover {
+    background:rgba(255,255,255,0.7);
+}
+footer form ul li#selected {
+	background:none;
+	color:#fff;
+	display:block;
+	margin-bottom:10px;
+	padding:0;
+}
+footer form button {
+	background:none;
+	border:none;
+}
+/* social and studio links */
+footer #social_links li, footer #studio_links li {
+    display:inline-block;
+}
+footer #social_links {
+	float:left;
+}
+footer #studio_links {
+	float:right;
+}
+footer small, footer p {
+	display:block;
+	padding:20px 0;
+}
+/* end footer */
+
+
+/*
+*   RESPONSIVE STYLES
+*
+*/
+@media only screen and (max-width:4000px) {
+    #news, #characters, #scoail, footer {
+    	padding:10px 40px;
+    }
+
+	/**
+	*  MAIN HEADER
+	*
+	*/
+	#main_header #main_nav a {
+		display:block;
+		padding:20px;
+	}
+	#main_nav ul {
+		display:none;
+	}
+    
+    /* time is power */
+	#main_header article {
+		margin:600px auto 0;
+		padding:50px 40px;
+		width:70%;
+	}
+	#main_header ul {
+		margin-top:25px;
+	}
+	#main_header ul li {
+		display:inline-block;
+		margin:20px 1%;
+		overflow:hidden;
+		width:15%;
+		min-width:180px;
+	}
+	#main_header ul li a span {
+        font-size:16px;
+        padding:4px 0;
+        text-transform:uppercase;
+	}
+	/* end time is power */
+	/* end main header */
+
+
+	/*
+	*   NEWS
+	*
+	*/
+	#news {
+		padding:50px 15%;
+	}
+	#news article {
+		display:inline-block;
+		margin:40px 1%;
+		width:31%;
+	}
+	#news h3 {
+        font-size:26px;
+        min-height:75px;
+	}
+	#news h3, #news p, #news .date {
+		margin:10px 20px;
+	}
+	#news p {
+		font-size: 15px;
+	}
+	#news p.text {
+		min-height:125px;
+	}
+	#news .date {
+	    font-size:13px;
+	}
+	/* div contains the buttons */
+	#news div {
+		margin:20px;
+		overflow:hidden;
+		width:60%;
+		min-width:180px;
+	}
+	/* end news */
+
+
+	/*
+	* CHARACTERS
+	*
+	*/
+	#characters {
+		padding:0 15%;
+	}
+    #characters h2 {
+    	font-size:50px;
+    	margin-bottom:10px;
+    }
+    #characters header {
+    	margin-bottom:40px;
+    }
+    #characters header p {
+        font-size:22px;
+    }
+    
+    #characters ul li {
+        display:inline-block;
+        margin:0 20px 25px;
+    }
+    #characters ul li:nth-child(even) {
+    	float:none;
+    }
+	/* end characters */
+
+
+	/*
+	*  FOOTER 
+	*
+	*/
+	footer {
+		padding:0 15%;
+	}
+	footer form div {
+		display:inline-block;
+        margin:35px 1%;
+        width:23%;
+	}
+	footer form div:nth-child(3) {
+        vertical-align:top;
+	}
+	/*change width of last div because it contains the button, add overflow and center */
+	footer form div:last-child {
+		overflow:hidden;
+		width:150px;
+	}
+    footer form input {
+    	display:block;
+    	font-size:16px;
+    	padding:15px 0;
+        width:100%;
+    }
+	footer form label {
+		padding:15px 0;
+	}
+	/* when input has focus we want to move the label up */
+	footer form input:focus + label {
+		padding:0;
+		top:-20px;
+	}
+	/* dropdown */
+	footer form ul {
+		padding:15px 0;
+		position:absolute;
+		top:30px;
+		left:0;
+	}
+	footer form button span {
+		font-size:16px;
+	}
+	/* social links */
+	footer #social_links li {
+		margin:25px 20px;
+	}
+	footer #social_links li:last-child {
+		margin-right:0;
+	}
+	footer #social_links .fa {
+		font-size:40px;
+	}
+	/* end footer */
+}
+/* end 1700px */
+
+
+
+@media only screen and (max-width:1200px) {
+	/*
+	*   SPECIAL BUTTONS
+	*   special buttons are only in header, news and footer form sections
+	*/
+	/* span contains the black border */
+	#main_header ul li:first-child {
+		margin-left:0;
+	}
+	#main_header ul li:last-child {
+		margin-left:0;
+	}
+	#main_header ul li a span,
+	#news a span,
+	footer form button span {
+	    box-sizing: border-box;
+	    padding:10px 0;
+	}
+	/* end special buttons
+
+
+    #news, #characters, #scoail, footer {
+    	padding:10px 40px;
+    }
+
+	/**
+	*  MAIN HEADER
+	*
+	*/
+    /* time is power */
+	#main_header article {
+		margin-top:400px;
+		width:auto;
+	}
+	#main_header ul li {
+		display:inline-block;
+		margin:20px 1%;
+		overflow:hidden;
+		width:23%;
+	}
+	/* end time is power */
+	/* end main header */
+
+
+
+	/*
+	*   NEWS
+	*
+	*/
+	#news article {
+		display:inline-block;
+		margin:40px 1%;
+		width:31%;
+	}
+	#news h3 {
+        font-size:26px;
+	}
+	#news h3, #news p, #news .date {
+		margin:10px 20px;
+	}
+	#news p {
+		font-size: 15px;
+	}
+	#news .date {
+	    font-size:13px;
+	}
+	/* div contains the buttons */
+	#news div {
+		margin:20px auto;
+		overflow:hidden;
+		width:90%;
+	}
+	/* end news */
+
+
+	/*
+	* CHARACTERS
+	*
+	*/
+    #characters h2 {
+    	font-size:50px;
+    	margin-bottom:10px;
+    }
+    #characters header {
+    	margin-bottom:40px;
+    }
+    #characters header p {
+        font-size:22px;
+    }
+    
+    #characters ul li {
+        display:inline-block;
+        margin:0 20px 25px;
+    }
+    #characters ul li:nth-child(even) {
+    	float:none;
+    }
+	/* end characters */
+
+
+	/*
+	*  FOOTER 
+	*
+	*/
+	footer form div {
+		display:inline-block;
+        margin:35px 1%;
+        width:23%;
+	}
+	footer form div:nth-child(3) {
+        vertical-align:top;
+	}
+	/*change width of last div because it contains the button, add overflow and center */
+	footer form div:last-child {
+		overflow:hidden;
+	}
+    footer form input {
+    	display:block;
+    	font-size:16px;
+    	padding:15px 0;
+        width:100%;
+    }
+	footer form label {
+		padding:15px 0;
+	}
+	/* when input has focus we want to move the label up */
+	footer form input:focus + label {
+		padding:0;
+		top:-20px;
+	}
+	/* dropdown */
+	footer form ul {
+		padding:15px 0;
+		position:absolute;
+		top:30px;
+		left:0;
+	}
+	footer form button span {
+		font-size:16px;
+	}
+	/* social links */
+	footer #social_links li {
+		margin:25px 20px;
+	}
+	footer #social_links li:last-child {
+		margin-right:0;
+	}
+	footer #social_links .fa {
+		font-size:40px;
+	}
+	/* end footer */
+}
+/* end 1200px */
+
+
+@media only screen and (max-width:862px) {
+	/*
+	*   SPECIAL BUTTONS
+	*   special buttons are only in header, news and footer form sections
+	*/
+	#main_header:before {
+		height:64%;
+		transform: rotate(0deg);
+	}
+	#main_header ul li a,
+	#news a,
+	footer form button {
+		margin:0 auto;
+		padding:15px 0;
+		width:95%;
+	}
+	/* span contains the black border */
+	#main_header ul li a span,
+	#news a span,
+	footer form button span {
+	    padding:20px 0;
+	    width:100%;
+	}
+	/* before and after on a to create the orange overlay effect */
+	#main_header ul li a:before,
+	#news a:before,
+	footer form button:before {
+	    content:"";
+	    position:absolute;
+	    top:15px;
+	    left:-22.5%;
+	    width:70%;
+	    height:85%;
+	}
+	#main_header ul li a:after,
+	#news a:after,
+	footer form button:after {
+	    content:"";
+	    position:absolute;
+	    top:0;
+	    right:-22.5%;
+	    width:70%;
+	    height:85%;
+	}
+	#main_header ul li a:hover:before,
+	#news a:hover:before,
+	footer form button:hover:before {
+		left: -15%;
+	}
+	#main_header ul li a:hover:before, #main_header ul li a:hover:after,
+	#news a:hover:before, #news a:hover:after,
+	footer form button:hover:before, footer form button:hover:after {
+	    top:0;
+	    height:100%;
+	}
+	/* end special buttons
+
+
+
+    #news, #characters, #scoail, footer {
+    	padding:10px 20px;
+    }
+
+	/**
+	*  MAIN HEADER
+	*
+	*/
+    /* time is power */
+	#main_header article {
+		margin-top:600px;
+		padding:50px 20px;
+	}
+	#main_header ul li {
+		margin:20px 0;
+		width:100%;
+	}
+	/* end time is power */
+	/* end main header */
+
+
+	/*
+	*   NEWS
+	*
+	*/
+	#news article {
+		display:block;
+		width:auto;
+	}
+	#news h3, #news p {
+		margin:10px;
+	}
+	#news .date {
+	    margin:10px;
+	}
+	/* end news */
+
+
+	/*
+	* CHARACTERS
+	*
+	*/
+    #characters ul li {
+        margin:0 20px 25px;
+    }
+    #characters ul li:nth-child(even) {
+    	float:right;
+    }
+	/* end characters */
+
+
+	/*
+	*  FOOTER 
+	*
+	*/
+	footer form div {
+		display:block;
+        margin:35px 0;
+        width:100%;
+	}
+	/*change width of last div because it contains the button and center */
+	footer form div:last-child {
+		margin:105px auto 35px;
+		width:99%;
+	}
+    footer form input {
+    	display:block;
+    	font-size:16px;
+    	padding:15px 0;
+        width:100%;
+    }
+	footer form label {
+		padding:15px 0;
+	}
+	/* when input has focus we want to move the label up */
+	footer form input:focus + label, #country {
+		padding:0;
+		top:-20px;
+	}
+	/* dropdown */
+	footer form ul {
+		padding:15px 0;
+	}
+	footer form button span {
+		font-size:16px;
+	}
+	/* social links */
+	footer #social_links li {
+		margin:25px 20px;
+	}
+	footer #social_links li:last-child {
+		margin-right:0;
+	}
+	footer #social_links .fa {
+		font-size:40px;
+	}
+	/* end footer */
+}
+/* end 800px */
+
+@media only screen and (max-width:850px) {
+	/*
+	* CHARACTERS
+	*
+	*/
+    #characters ul li {
+        margin:0 20px 25px;
+    }
+    #characters ul li:nth-child(even) {
+    	float:none;
+    }
+	/* end characters */
+}
+
+
+
+@media only screen and (max-width:845px) {
+	/*
+	* CHARACTERS
+	*
+	*/
+    #characters ul li {
+    	display:block;
+        margin:20px auto;
+    }
+    #characters ul li:nth-child(even) {
+    	float:none;
+    }
+	/* end characters */
+}
+/* end 736 */
+
+
+@media only screen and (max-width:636px) {
+    #news, #characters, #scoail, footer {
+    	padding:10px;
+    }
+
+	/**
+	*  MAIN HEADER
+	*
+	*/
+	#main_header:before {
+		height:79%;
+	}
+	#main_header #main_nav a {
+		display:block;
+		padding:20px;
+	}
+	#main_nav ul {
+		display:none;
+	}
+    
+    /* time is power */
+	#main_header article {
+		margin-top:300px;
+		padding:50px 10px;
+	}
+	/* end time is power */
+	/* end main header */
+
+
+	/*
+	* CHARACTERS
+	*
+	*/
+    #characters ul li {
+        display:block;
+        margin:20px auto;
+    }
+    #characters ul li:nth-child(even) {
+    	float:none;
+    }
+	/* end characters */
+
+
+	/*
+	*  FOOTER 
+	*
+	*/
+	/* dropdown */
+	footer form ul {
+		padding:15px 0;
+	}
+	footer #social_links li, footer #studio_links li {
+        display:block;
+	}
+	footer #social_links li a, footer #studio_links li a {
+		display:block;
+	}
+	footer #studio_links li:last-child {
+	    float:right;
+	}
+	footer #social_links li {
+		margin:25px 0;
+	}
+	/* end footer */
+}
+/* end 636px */
+
+
+
+@font-face {
+	font-family: 'roboto-reg';
+	src: url('../fonts/roboto-regular.eot?') format('eot'), url('../fonts/roboto-regular.woff') format('woff'), url('../fonts/roboto-regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'roboto-bold';
+	src: url('../fonts/roboto-bold.eot?') format('eot'), url('../fonts/roboto-bold.woff') format('woff'), url('../fonts/roboto-bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'roboto-light';
+	src: url('../fonts/roboto-light.eot?') format('eot'), url('../fonts/roboto-light.woff') format('woff'), url('../fonts/roboto-light.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'roboto-medium';
+	src: url('../fonts/roboto-medium.eot?') format('eot'), url('../fonts/roboto-medium.woff') format('woff'), url('../fonts/roboto-medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'roboto-thin';
+	src: url('../fonts/roboto-thin.eot?') format('eot'), url('../fonts/roboto-thin.woff') format('woff'), url('../fonts/roboto-thin.ttf') format('truetype');
+}
